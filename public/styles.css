@@ -1,0 +1,246 @@
+/* Загальні стилі */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f7f8fa;
+  color: #333;
+  line-height: 1.6;
+}
+
+a{
+  text-decoration: none;
+}
+/* Navbar стилі */
+.navbar {
+  background-color: #1e2a47; /* темний синій */
+  padding: 1rem 2rem;
+}
+
+.navbar-brand {
+  color: #fff;
+  font-size: 2rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.navbar-nav {
+  display: flex;
+  justify-content: flex-start;
+  gap: 2rem;
+}
+
+.nav-item {
+  list-style: none;
+}
+
+.nav-link {
+  color: #fff;
+  font-size: 1.1rem;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #ffd700; /* золотистий для ефекту при наведенні */
+}
+
+/* Головна секція */
+.home {
+  text-align: center;
+  padding: 5rem 2rem;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin: 3rem auto;
+  max-width: 900px;
+}
+
+.home h1 {
+  font-size: 2.5rem;
+  color: #333;
+}
+
+.home p {
+  font-size: 1.2rem;
+  color: #777;
+  margin-bottom: 1.5rem;
+}
+
+.home .btn {
+  background-color: #1e2a47;
+  color: #fff;
+  padding: 1rem 2.5rem;
+  border: none;
+  font-size: 1.1rem;
+  border-radius: 25px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.home .btn:hover {
+  background-color: #ffd700;
+}
+
+/* Сторінка з погодою */
+.container {
+  display: flex;
+  max-width: 1200px;
+  margin: 3rem auto;
+  gap: 2rem;
+}
+
+.row {
+  display: flex;
+  gap: 2rem;
+  width: 100%;
+}
+
+.col-md-3 {
+  width: 25%;
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.list-group {
+  padding: 0;
+  list-style: none;
+  margin-bottom: 2rem;
+}
+
+.list-group-item {
+  padding: 1.2rem;
+  background-color: #f9f9f9;
+  border: none;
+  color: #333;
+  font-size: 1.1rem;
+  cursor: pointer;
+  margin-bottom: 1rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  width: 100%; /* Забезпечує ширину на всю панель */
+  text-align: left; /* Залишаємо текст по лівому краю */
+  border-radius: 8px;
+  display: block; /* Зробимо кожен елемент блоком */
+}
+
+.list-group-item:hover {
+  background-color: #1e2a47;
+  color: #fff;
+}
+
+.list-group-item.active {
+  background-color: #ffd700;
+  color: #fff;
+}
+
+/* Модифікація лінків для невідображення підкреслення */
+.list-group-item a {
+  color: #333;
+  text-decoration: none;
+  display: block; /* Щоб можна було натискати на весь елемент */
+}
+
+.list-group-item a:hover {
+  color: #fff;
+}
+
+.col-md-9 {
+  flex: 1;
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card {
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card-body {
+  text-align: center;
+}
+
+.weather-icon {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 1.5rem;
+}
+
+.table {
+  width: 100%;
+  margin-top: 2rem;
+  border-collapse: collapse;
+}
+
+.table td {
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  text-align: left;
+  font-size: 1.1rem;
+}
+
+.table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.table td:nth-child(2) {
+  font-weight: bold;
+  color: #333;
+}
+
+/* Футер */
+footer {
+  background-color: #1e2a47;
+  color: white;
+  padding: 2rem;
+  text-align: center;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: #ffd700;
+}
+
+/* Медіа запити */
+@media (max-width: 992px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .row {
+    flex-direction: column;
+  }
+
+  .col-md-3, .col-md-9 {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .home h1 {
+    font-size: 2rem;
+  }
+
+  .home .btn {
+    padding: 0.8rem 2rem;
+  }
+
+  .list-group-item {
+    font-size: 1rem;
+  }
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{title}}</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+{{> header title="Weather Info" }}
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-3">
+      <ul class="list-group">
+        {{#each cities}}
+          <a href="/weather?city={{name}}" class="list-group-item {{#if isActive}}active{{/if}}">
+            {{name}}
+          </a>
+        {{/each}}
+      </ul>
+    </div>
+    <div class="col-md-9">
+      <h3>Погода в місті {{city}}</h3>
+      <div class="card">
+        <div class="card-body text-center">
+          <img src="{{icon}}" alt="Weather Icon" class="weather-icon">
+          <h5>{{weather}}</h5>
+          <table class="table">
+            <tbody>
+              <tr>
+                <td>Тиск</td>
+                <td>{{pressure}}</td>
+              </tr>
+              <tr>
+                <td>Вологість</td>
+                <td>{{humidity}}%</td>
+              </tr>
+              <tr>
+                <td>Температура</td>
+                <td>{{temperature}}°C</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{{> footer }}
+
+
+</body>
+</html>
